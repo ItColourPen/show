@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>数据抓取</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+    .fakeimg {
+        height: 200px;
+         background: #aaa;
+    }
+  </style>
+</head>
+<body>
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>数据抓取</h1>
+  <p>《高考大数据挖掘算法研究》第一步</p> 
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">当前界面：数据抓取</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=../index.html>主页面</a></li>
+        <li class="active"><a href=crawler.html>数据抓取</a></li>
+        <li><a href=analysis.html>初步挖掘</a></li>
+		<li><a href=mining.html>热度挖掘</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>爬虫环境</h2>
+      <p>编程语言Python</p>
+	  <p>网络库requsets</p>
+	  <p>正则表达式re</p>
+	  <p>数据解析json</p>
+	  
+      <h2>界面类型</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <h4>HTML静态页面</h4>
+		<p>直接发起GET请求用正则表达式解析</p>
+		<h4>AJAX动态界面</h4>
+		<p>抓包用JSON解析</p>
+      </ul>
+      <hr class="hidden-sm hidden-md hidden-lg">
+    </div>
+	
+    <div class="col-sm-8">
+      <h2>浙江省高考每年报名总人数</h2>
+      <h5>静态界面</h5>
+      <img src = data11.png>
+	  <p><pre>
+# -*- coding: uft-8 -*-
+import requests
+import re
+def get_data(url, pattern)
+	html = request.get(url)
+	data = re.findall(pattern, html.text)
+	return data
+</pre></p>
+      <br>
+      <h2>每年的批次线</h2>
+      <h5>动态页面</h5>
+      <img src = data12.png>
+	  <p><pre>
+# -*- coding: uft-8 -*-
+import requests
+import json
+def get_data(ajax_url, key)
+	html = request.get(ajax_url)
+	data = json.loads(ajax_url.context)[key]
+	return data
+</pre></p> 
+	</div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>数据抓取</p>
+</div>
+</body>
+</html>
